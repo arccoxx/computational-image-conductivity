@@ -1,0 +1,87 @@
+{
+  "version": 2,
+  "modules": [
+    {
+      "id": 1,
+      "plugin": "Core",
+      "model": "VCO-1",
+      "pos": [0, 0],
+      "params": [{"id": "PITCH", "value": 0.0}, {"id": "FINE", "value": 0.0}, {"id": "SYNC", "value": 0.0}, {"id": "FM", "value": 0.0}],
+      "data": {},
+      "version": 1
+    },
+    {
+      "id": 2,
+      "plugin": "Core",
+      "model": "VCA-1",
+      "pos": [150, 0],
+      "params": [{"id": "LEVEL", "value": 1.0}],
+      "data": {},
+      "version": 1
+    },
+    {
+      "id": 3,
+      "plugin": "Core",
+      "model": "LFO-1",
+      "pos": [0, 150],
+      "params": [{"id": "FREQ", "value": -2.0}, {"id": "SYNC", "value": 0.0}],
+      "data": {},
+      "version": 1
+    },
+    {
+      "id": 4,
+      "plugin": "Core",
+      "model": "VCA-1",
+      "pos": [150, 150],
+      "params": [{"id": "LEVEL", "value": 0.3}],
+      "data": {},
+      "version": 1
+    },
+    {
+      "id": 5,
+      "plugin": "Core",
+      "model": "Mixer-8ch",
+      "pos": [300, 0],
+      "params": [{"id": "CH1_LEVEL", "value": 1.0}, {"id": "CH2_LEVEL", "value": 0.3}, {"id": "CH3_LEVEL", "value": 0.0}, {"id": "CH4_LEVEL", "value": 0.0}, {"id": "CH5_LEVEL", "value": 0.0}, {"id": "CH6_LEVEL", "value": 0.0}, {"id": "CH7_LEVEL", "value": 0.0}, {"id": "CH8_LEVEL", "value": 0.0}, {"id": "CH1_PAN", "value": 0.0}, {"id": "CH2_PAN", "value": 0.0}],
+      "data": {},
+      "version": 1
+    },
+    {
+      "id": 6,
+      "plugin": "Core",
+      "model": "VCF-1",
+      "pos": [450, 0],
+      "params": [{"id": "FREQ", "value": 0.0}, {"id": "RES", "value": 0.2}, {"id": "DRIVE", "value": 0.0}],
+      "data": {},
+      "version": 1
+    },
+    {
+      "id": 7,
+      "plugin": "Core",
+      "model": "Scope-1",
+      "pos": [600, 0],
+      "params": [],
+      "data": {},
+      "version": 1
+    },
+    {
+      "id": 8,
+      "plugin": "Core",
+      "model": "AudioOut-1",
+      "pos": [750, 0],
+      "params": [],
+      "data": {},
+      "version": 1
+    }
+  ],
+  "cables": [
+    {"id": 101, "outputModuleId": 1, "outputId": "OUT", "inputModuleId": 2, "inputId": "IN"},
+    {"id": 102, "outputModuleId": 3, "outputId": "OUT", "inputModuleId": 4, "inputId": "IN"},
+    {"id": 103, "outputModuleId": 2, "outputId": "OUT", "inputModuleId": 5, "inputId": "CH1_IN"},
+    {"id": 104, "outputModuleId": 4, "outputId": "OUT", "inputModuleId": 5, "inputId": "CH2_IN"},
+    {"id": 105, "outputModuleId": 5, "outputId": "OUT", "inputModuleId": 6, "inputId": "IN"},
+    {"id": 106, "outputModuleId": 6, "outputId": "OUT", "inputModuleId": 7, "inputId": "IN"},
+    {"id": 107, "outputModuleId": 6, "outputId": "OUT", "inputModuleId": 8, "inputId": "IN_L"},
+    {"id": 108, "outputModuleId": 6, "outputId": "OUT", "inputModuleId": 8, "inputId": "IN_R"}
+  ]
+}
